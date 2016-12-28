@@ -1,0 +1,35 @@
+
+{
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "name": "unboreme",
+  "description": "Application to show users a list of activities.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.14.0",
+    "lite-server": "^2.2.2"
+  },
+  "scripts": {
+    "postinstall": "jspm-install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandhyapillai/Unbore-me.git"
+  },
+  "author": "Sandhya & Vimal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandhyapillai/Unbore-me/issues"
+  },
+  "homepage": "https://github.com/sandhyapillai/Unbore-me#readme"
+}
