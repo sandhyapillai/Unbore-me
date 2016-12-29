@@ -1,8 +1,11 @@
-
 {
   "jspm": {
     "directories": {
       "baseURL": "src"
+    },
+    "dependencies": {
+      "angular": "npm:angular@^1.6.1",
+      "angular-mocks": "npm:angular-mocks@1.6.1"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
@@ -16,11 +19,23 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "eslint-plugin-jasmine": "^2.2.0",
     "express": "^4.14.0",
-    "lite-server": "^2.2.2"
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-jspm": "^2.2.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-spec-reporter": "0.0.26",
+    "lite-server": "^2.2.2",
+    "phantomjs-prebuilt": "^2.1.14"
   },
   "scripts": {
-    "postinstall": "jspm-install"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",

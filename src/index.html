@@ -10,5 +10,11 @@
 	<script type="text/javascript" src="config.js"></script>
 	
 	<!-- Bootstrapping angular -->
+	<script>
+		System.import('app/app.js').catch(console.error.bind(console));
+	</script>
+	<div ng-controller="mainController">
+		{{message}}
+	</div>
 </body>
 </html>
