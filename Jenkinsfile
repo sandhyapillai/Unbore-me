@@ -4,7 +4,7 @@
             checkout scm
         }
         stage('Main') {
-            sh 'npm install && jspm install'
+            sh './build.sh'
         }
         stage('Post') {
             sh 'echo test'
