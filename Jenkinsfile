@@ -1,12 +1,14 @@
-// Pipeline for building and deploying 
+// Pipeline for building and deploying
  node {
-        stage('Checkout') {
-            checkout scm
-        }
-        stage('Main') {
-            sh './build.sh'
-        }
-        stage('Post') {
-            sh 'echo test'
-        }
+  withCredentials([[$class: 'StringBinding', credentialsId: 'HEROKU_API_KEY', variable: 'HKEY']]) {
+    stage('Checkout') {
+        checkout scm
     }
+    stage('Main') {
+        sh './build.sh'
+    }
+    stage('Deploy') {
+        sh './deploy.sh $HKEY'
+    }
+  }
+}
