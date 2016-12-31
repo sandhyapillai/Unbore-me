@@ -7,4 +7,4 @@ echo $HEROKU_API_KEY > test-log.txt
 cat test-log.txt
 heroku create unbore-me
 
-git push heroku master
+git push heroku ${GIT_BRANCH}:master
