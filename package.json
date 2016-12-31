@@ -39,7 +39,8 @@
     "phantomjs-prebuilt": "^2.1.14"
   },
   "scripts": {
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "postinstall": "jspm install"
   },
   "repository": {
     "type": "git",
