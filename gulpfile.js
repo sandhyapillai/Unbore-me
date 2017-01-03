@@ -26,7 +26,7 @@ function handleError(error){
 
 // use this for building
 gulp.task('dist:node', function (done) {
-  exec('cp -a ./server/. ./dist/server && cp ./Procfile ./dist && cp ./package.json ./dist && cp -a ./src/. ./dist/src',function(err){
+  exec('cp -a ./server/. ./dist/server && cp ./Procfile ./dist && cp ./package.json ./dist',function(err){
                 if(err !=null){throw err;}
                 done();
         })
@@ -83,7 +83,7 @@ gulp.task('build:html',function(){
 		})
 	}))
 	.on('error',handleError)
-	.pipe(gulp.dest('./dist'))
+	.pipe(gulp.dest('./dist/src'))
 	
 });
 
@@ -94,7 +94,7 @@ gulp.task('build:js',['bundle:js'],function(){
 	.pipe(uglify())
 	.on('error',handleError)
 	.pipe(concat('app.min.js'))
-	.pipe(gulp.dest('./dist'))
+	.pipe(gulp.dest('./dist/src'))
 	.pipe(reload({stream:true}));
 });
 
