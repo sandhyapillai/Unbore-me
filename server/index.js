@@ -1,7 +1,7 @@
 /**
  * Node Express Server code for Unbore-Me Application
  */
-
+'use strict'
 var express = require('express'),
 path = require('path'),
 port = 3000;

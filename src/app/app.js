@@ -4,6 +4,7 @@
 
 import angular from 'angular';
 import MainCtrl from './controllers/main';
+import '../styles/style.css!'; // Adding style file
 
 const main = angular.module("UnboreMe",[])
 			 .controller("mainController",MainCtrl);

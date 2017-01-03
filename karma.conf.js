@@ -21,7 +21,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
     	'./src/jspm_packages/npm/angular@1.6.1/angular.js',
-    	'./src/jspm_packages/npm/angular-mocks@1.6.1/angular-mocks.js'
+    	'./src/jspm_packages/npm/angular-mocks@1.6.1/angular-mocks.js',
+    	'./src/styles/style.css'
     ],
 
 
