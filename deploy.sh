@@ -25,4 +25,4 @@ fi
 git remote add heroku git@heroku.com:${HEROKU_APP}.git
 
 
-git push -f heroku ${GIT_BRANCH}:master
+git push -f heroku HEAD:master
