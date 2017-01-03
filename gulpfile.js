@@ -24,6 +24,16 @@ function handleError(error){
 	this.emit('end');
 }
 
+// use this for building
+gulp.task('dist:node', function (done) {
+  exec('cp -a ./server/. ./dist/server && cp ./Procfile ./dist && cp ./package.json ./dist && cp -a ./src/. ./dist/src',function(err){
+                if(err !=null){throw err;}
+                done();
+        })
+
+});
+
+
 //use this for development
 gulp.task('test', function (done) {
   new Server({
@@ -57,7 +67,7 @@ gulp.task("build",function(done){
 });
 
 gulp.task('build:clean',function(done){
-	exec('rm -rf dist && mkdir dist',function(err){
+	exec('rm -rf dist && mkdir dist && mkdir dist/server && mkdir dist/src',function(err){
 		if(err !=null){throw err;}
 		done();
 	})
@@ -142,6 +152,16 @@ gulp.task('serve',['browser:sync'],function(){
 	gulp.watch('src/**/*.js',['build']);
 	gulp.watch('src/**/*.css',['build']);
 });
+
+gulp.task('dist', function(done){
+        runSequence(
+                        'build',
+                        'dist:node',
+                        done
+        );
+
+});
+
 
 gulp.task('default',['build','serve'],function(){
 	console.log("Finished running gulp");
