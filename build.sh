@@ -10,4 +10,4 @@ jspm install
 gulp ci-test
 
 #Create a distribution
-gulp build
+gulp dist
