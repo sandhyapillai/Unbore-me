@@ -5,16 +5,17 @@
 <title>Unbore Me</title>
 </head>
 <body>
-    <!-- Scripts to load the JSPM packages -->
-	<script type="text/javascript" src="jspm_packages/system.js"></script>
+    <!-- htmlbuild:js -->
+    <script type="text/javascript" src="jspm_packages/system.js"></script>
 	<script type="text/javascript" src="config.js"></script>
-	
-	<!-- Bootstrapping angular -->
 	<script>
 		System.import('app/app.js').catch(console.error.bind(console));
 	</script>
+	<!-- endbuild  -->
+	
 	<div ng-controller="mainController">
 		{{message}}
 	</div>
+	
 </body>
 </html>

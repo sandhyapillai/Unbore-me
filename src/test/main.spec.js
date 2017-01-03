@@ -1,5 +1,7 @@
+
 import MainApp from '../app/app';
 import MainCtrl from '../app/controllers/main';
+
 describe("UnboreMe Application testing",function(){
 	var mainCtrl,scope;
 	
@@ -11,7 +13,7 @@ describe("UnboreMe Application testing",function(){
 	}))
 	it("MainCtrl exist",function(){
 		var ctrl = mainCtrl("mainController",{$scope:scope});
-		expect(scope.message).toEqual('Hello World');
+		expect(scope.message).toEqual('Hello World123');
 		
 	})
 })

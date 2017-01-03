@@ -1,5 +1,6 @@
 export default class MainCtrl{
 	constructor($scope){
-		$scope.message = "Hello World"
+		'ngInject';
+		$scope.message = "Hello World123"
 	}
 };
