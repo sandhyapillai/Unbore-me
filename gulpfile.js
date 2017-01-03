@@ -103,7 +103,7 @@ gulp.task('build:css',function(){
 });
 
 gulp.task('build:cleanup',function(done){
-	exec('rm ./dist/app.js',function(err){
+	exec('sleep 2 && rm ./dist/app.js',function(err){
 		if (err != null) { throw err; }
 	    done();
 	})
