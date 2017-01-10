@@ -14,7 +14,6 @@ import '../styles/style.css!'; // Adding style file
 
 
 const main = angular.module("UnboreMe",[])
-			 .constant('mainConfig',{'ZIP':94588})
 			 .controller("homeCtrl",HomeCtrl)
 			 .service("homeService",HomeService)
 			
