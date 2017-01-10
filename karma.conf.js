@@ -22,6 +22,7 @@ module.exports = function(config) {
     files: [
     	'./src/jspm_packages/npm/angular@1.6.1/angular.js',
     	'./src/jspm_packages/npm/angular-mocks@1.6.1/angular-mocks.js',
+    	'./src/app/templates/**/*.tpl.html',
     	'./src/styles/style.css'
     ],
 
@@ -51,7 +52,8 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
     	'src/app/{*.js,!jspm_packages{,/**}}':['babel'],
-    	'src/app/controllers/**/!(*.spec).js':['babel']
+    	'src/app/controllers/**/!(*.spec).js':['babel'],
+    	'src/app//**/!(*.spec).js':['babel']
     },
      proxies:{
     	 '/src/':'/base/src/',
@@ -61,7 +63,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
+    reporters: ['coverage','spec'],
 
 
     // web server port
@@ -92,6 +94,15 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+    
+ // set up the spec reporter - I just want to see the "expected x to equal y" output in errors
+    specReporter: {
+      maxLogLines: 1,
+      suppressErrorSummary: true,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: false
+    }
   })
 }

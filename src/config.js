@@ -20,6 +20,13 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.32",
+    "html": "github:Hypercubed/systemjs-plugin-html@0.0.8",
+    "ng-template": "npm:plugin-ng-template@0.1.1",
+    "text": "github:systemjs/plugin-text@0.0.2",
+    "twbs/bootstrap": "github:twbs/bootstrap@3.3.7",
+    "github:Hypercubed/systemjs-plugin-html@0.0.8": {
+      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.23"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -37,6 +44,9 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "github:twbs/bootstrap@3.3.7": {
+      "jquery": "npm:jquery@3.1.1"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
