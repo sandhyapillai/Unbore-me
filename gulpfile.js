@@ -60,6 +60,7 @@ gulp.task("build",function(done){
 				'build:html',
 				'build:js'
 			],
+			'copy:images',
 			'build:cleanup',
 			done
 	);
@@ -112,6 +113,13 @@ gulp.task('build:css',function(){
 		
 });
 
+gulp.task('copy:images',function(){
+	gulp.src('src/images/*.png')
+		.pipe(gulp.dest('./dist/src/images'))
+		
+});
+
+
 gulp.task('build:cleanup',function(done){
 	exec('sleep 2 && rm ./dist/app.js',function(err){
 		if (err != null) { throw err; }
@@ -123,7 +131,7 @@ gulp.task('build:cleanup',function(done){
 gulp.task('nodemon',function(done){
 	var running = false;
 	return nodemon({
-		script:'server/index.js',
+		script:'./dist/server/index.js',
 		watch:['server/*.*']
 	})
 	.on('start',function(){
@@ -141,7 +149,7 @@ gulp.task('nodemon',function(done){
 
 gulp.task('browser:sync',['nodemon'],function(){
 	browserSync.init(null,{
-		server:'./dist',
+		server:'./dist/src/',
 		browser:'google chrome',
 		port:7000
 	});
