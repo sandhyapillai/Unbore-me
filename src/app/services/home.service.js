@@ -28,3 +28,7 @@ export default class weatherService{
 	
 }
 
+//export default angular.module('UnboreMe',[]).service("homeService",HomeService)
+			 
+				
+

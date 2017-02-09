@@ -1,3 +1,5 @@
+//import HomeService from './services/home.service';
+
 export default class homeController{
 	constructor($scope,homeService,$http){
 		'ngInject';
