@@ -6,6 +6,7 @@
     "dependencies": {
       "angular": "npm:angular@^1.6.1",
       "angular-mocks": "npm:angular-mocks@1.6.1",
+      "angular-ui-router": "github:angular-ui/angular-ui-router-bower@^0.3.2",
       "css": "github:systemjs/plugin-css@^0.1.32",
       "html": "github:Hypercubed/systemjs-plugin-html@^0.0.8",
       "ng-template": "npm:plugin-ng-template@^0.1.1",

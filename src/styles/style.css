@@ -17,13 +17,14 @@ body{
   font-weight: 700;
   border: none;
   margin-bottom:20px;
+  height:110px;
+  color: white;
 }
 .header{
 	color: white;
 }
 .weather-app{
-	padding:15px;
-	color:#fff;
+	padding-right:20px;
 }
 footer .footer-below {
   text-align:center;	
@@ -45,4 +46,22 @@ div.change-city a,a:hover{
 	outline:none;
 	color:#276eaf;
 }
+
+/* Override the Bootstrap navbar style */
+.navbar-custom .navbar-brand,.navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand
+.navbar-custom .navbar-brand:focus{
+  background-color: transparent;
+  color: #FFF;
+}
+
+.navbar-custom .navbar-nav > li > a{
+	color:#FFF;
+}
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus{
+	background-color: transparent;
+	color:#337ab7;
+}
+
+/*End*/
+
 

@@ -16,6 +16,7 @@ System.config({
   map: {
     "angular": "npm:angular@1.6.1",
     "angular-mocks": "npm:angular-mocks@1.6.1",
+    "angular-ui-router": "github:angular-ui/angular-ui-router-bower@0.3.2",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
